@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+header{
+	width: 80%;
+	height: 10em;
+	margin: auto;
+	padding: 0.6em;
+	background-color: #DFDFDF;
+	box-shadow: -3px 2px 20px 0px #2E2E2E;
+}
+nav{
+	
+	width: 40%;
+	margin-top: 3.5em;
+	margin-right: 1em;
+	float: right;
+}
+
+img{
+	width: 50%;
+	height: 100%;
+	margin-left: 2em;
+}
+main{
+	width: 80%;
+	min-height: 30em;
+	margin: 2em auto;
+	padding: 0.6em;
+	background-color: none;
+	box-shadow: -3px 2px 20px 0px #2E2E2E;
+}
+
+article{
+	width: auto;
+	min-height: 28em;
+	padding: 0.6em
+}
+
+h1{
+	font-family: Arial;
+	font-size: 2em;
+	color: #272727;
+}
+
+header nav h1{
+	font-family: Arial;
+	font-size: 1em;
+	color: #FFFFFF;
+}
+
+p{
+	font-family: Arial;
+	font-size: 1em;
+	line-height: 150%;
+	text-align: justify;
+	padding: 0.2em;
+	color: #737373;
+}
+
+footer{
+	width: auto;
+	height: 4em;
+	margin: 2em auto 0em;
+	padding: 0.6em;
+	background-color: #222222;
+}
+
+footer p{
+	font-family: Arial;
+	font-size: 1em;
+	line-height: 150%;
+	text-align: center;
+	padding: 0.2em;
+	color: #737373;
+}
+
+header nav a:link, a:visited {
+    background-color: #f44336;
+	width:22%;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+header nav a:hover, a:active {
+    background-color: red;
+}
