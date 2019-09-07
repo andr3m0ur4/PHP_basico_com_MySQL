@@ -14,12 +14,12 @@
 </head>
 <body>
 	<header>
-		<img src="images/html-css-js-php-mysql.png" alt="">
+		<a href="index.php"><img src="images/html-css-js-php-mysql.png" alt=""></a>
 	
 		<nav>
 			<h1>PHP com banco de dados MySQL</h1>
 			<p>
-				<a href="#">Básico</a>
+				<a href="basico/index.php">Básico</a>
 				<a href="#">Sistema</a>
 			</p>
 		</nav>
