@@ -16,7 +16,7 @@
 	<header>
 		<a href="../index.php"><img src="../images/html-css-js-php-mysql.png" alt=""></a>
 	
-		<nav>
+		<nav id="secundario">
 			<?php include_once 'menu.php'; ?>
 		</nav>
 	</header>
