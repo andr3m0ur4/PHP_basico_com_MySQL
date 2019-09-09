@@ -32,6 +32,13 @@
 			<p>
 				Acessando o menu você irá testar alguns dos exemplos implementados no curso.
 			</p>
+			<p>
+				<?php  
+				include_once 'biblioteca_funcoes.php';
+				$dia = dia_atual ( );
+				echo exibeMensagem ( "Hoje é $dia" );
+				?>
+			</p>
 		</article>
 		
 	</main>

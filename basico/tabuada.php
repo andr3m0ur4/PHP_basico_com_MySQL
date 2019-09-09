@@ -14,11 +14,10 @@
 		</fieldset>
 	</form>
 	<?php  
+		include_once 'biblioteca_funcoes.php';
 		if ( isset ( $_POST['valor']) ) {
 			$n = $_POST['valor'];
-			for ( $i = 0; $i <= 10; $i++ ) {
-				echo "<h3> $n X $i = " . $n * $i . "</h3>";
-			}
+			exibeTabuada ( $n );
 		}
 	?>
 </body>
