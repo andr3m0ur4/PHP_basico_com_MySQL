@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
+acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, 
+tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
+tfoot, thead, tr, td, th, article, aside, canvas, details, embed, figure, figcaption, footer, header,
+hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, address, main {
+	display: block;
+}
+
+audio, canvas, video, img, picture, embed, iframe {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+@viewport {
+	width: device-width;
+	zoom: 1;
+	min-zoom: 0.5;
+	max-zoom: 4;
+	orientation: portrait;
+}
+
+.quebra {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* código para navegadores antigos
+continuação do nosso conteúdo */
+
+body{
+	background-color: #BFE9F5;
+	margin-top: 0;
+}
+
+header{
+	height: 150px;
+	width: 80%;
+	background-color: #42c4f2;
+	background-image: url(imagem/header.png);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+nav{
+	height: 30px;
+	width: 80%;
+	background-color: #90E6F8;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+main{
+	height: 150px;
+	width: 80%;
+	background-color: #1385AD;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+/* Regras para as DIV do footer */
+footer p {
+	text-align: justify;
+	font-size: 30px;
+	margin: 15px;
+	margin-left: 10px;
+}
+
+footer img {
+	padding-left: 5px;
+}
+
+#footer1 {
+	float: left;
+	width: 70%;
+}
+
+#footer1 a:visited {
+	color: orange;
+}
+
+#footer2 {
+	float: left;
+	width: 30%;
+}
+
+footer{
+	width: 80%;
+	background-color: #054B5A;
+	margin: 0 auto;
+	padding: 10px;
+	height: 220px;
+}
+
+#myphoto {
+	height: 220px;
+}
+
+/* CSS do menu feito com UL*/
+nav ul {
+	font-family: Arial, Verdana;
+	font-size: 12px;
+	margin: 0px 1px;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: block;
+	position: relative;
+	float: left;
+}
+
+nav li ul{
+	display: none;
+	margin: 0px;
+}
+
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+	width: 238px;
+	border-top: 1px solid #ffffff;
+	padding: 5px 15px 5px 15px;
+	background: #2C5463;
+	margin-left: 1px;
+	white-space: nowrap;
+}
+
+nav ul li a:hover{
+	background: #617F8A;
+}
+
+nav li:hover ul{
+	display: block;
+	position: absolute;
+}
+
+nav li:hover li{
+	float: none;
+	font-size: 11px;
+}
+
+nav li:hover a{
+	background: #617F8A;
+}
+
+nav li:hover li a:hover{
+	background: #95A9B1;
+}

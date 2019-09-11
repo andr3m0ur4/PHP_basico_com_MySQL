@@ -1,8 +1,6 @@
 <?php  
-class Usuario {
-	private $codigo;
-	private $nome;
-	private $email;
+class Usuario extends Pessoa {
+	
 	private $login;
 	private $senha;
 
@@ -13,31 +11,7 @@ class Usuario {
 		$this -> setLogin ( $login );
 		$this -> setSenha ( $senha );
 	}
-
-	public function setCodigo ( $valor ) {
-		$this -> codigo = $valor;
-	}
-
-	public function getCodigo ( ) {
-		return $this -> codigo;
-	}
-
-	public function setNome ( $valor ) {
-		$this -> nome = $valor;
-	}
-
-	public function getNome ( ) {
-		return $this -> nome;
-	}
-
-	public function setEmail ( $valor ) {
-		$this -> email = $valor;
-	}
-
-	public function getEmail ( ) {
-		return $this -> email;
-	}
-
+	
 	public function setLogin ( $valor ) {
 		$this -> login = $valor;
 	}
