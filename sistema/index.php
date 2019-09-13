@@ -1,20 +1,35 @@
+<?php  
+include_once 'class/Pessoa.php';
+include_once 'class/Usuario.php';
+include_once 'class/Contato.php';
+include_once 'class/Conexao.php';
+include_once 'class/DAL/DALUsuario.php';
+include_once 'class/DAL/DALContato.php';
+?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Minha Agenda</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-	<?php  
-	include_once 'class/Usuario.php';
+	<header>
+		<!-- Todo o conteúdo do cabeçalho -->
 
-	$obj = new Usuario ( 1, 'André Moura', 'andre.benedicto@etec.sp.gov.br', 'andre_moura', '@ndr3' );
-	
-	echo "<h1> Dados dos Usuários </h1>";
-	echo "<h2> Código: {$obj -> getCodigo ( )} </h2>";
-	echo "<h2> Nome: {$obj -> getNome ( )} </h2>";
-	echo "<h2> Email: {$obj -> getEmail ( )} </h2>";
-	echo "<h2> Login: {$obj -> getLogin ( )} </h2>";
-	echo "<h2> Senha: {$obj -> getSenha ( )} </h2>";
-	?>
+	</header>
+	<nav>
+		<?php include_once 'estrutura/menu.php'; ?>
+	</nav>
+	<main>
+		<!-- Todo o conteúdo do principal -->
+		<article>
+			<!-- Todo o conteúdo de notícia -->
+			<?php include_once 'estrutura/principal.php'; ?>
+		</article>
+	</main>
+	<footer>
+		<?php include_once 'estrutura/rodape.php'; ?>
+	</footer>
 </body>
 </html>
