@@ -19,26 +19,26 @@ function dia_atual ( ) {
 	$hoje = getdate ( );
 	switch ( $hoje['wday'] ) {
 		case 0:
-		return "Domingo";
-		break;
+			return "Domingo";
+				break;
 		case 1:
-		return "Segunda";
-		break;
+			return "Segunda";
+				break;
 		case 2:
-		return "Terça";
-		break;
+			return "Terça";
+				break;
 		case 3:
-		return "Quarta";
-		break;
+			return "Quarta";
+				break;
 		case 4:
-		return "Quinta";
-		break;
+			return "Quinta";
+				break;
 		case 5:
-		return "Sexta";
-		break;
+			return "Sexta";
+				break;
 		case 6:
-		return "Sábado";
-		break;
+			return "Sábado";
+				break;
 	}
 }
 

@@ -19,8 +19,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 
 audio, canvas, video, img, picture, embed, iframe {
 	display: inline-block;
-	width: auto;
-	height: auto;
+	/*width: auto;
+	height: auto;*/
 	max-width: 100%;
 }
 
@@ -65,11 +65,19 @@ nav{
 }
 
 main{
-	height: 150px;
+	height: auto;
 	width: 80%;
 	background-color: #1385AD;
 	margin: 0 auto;
 	padding: 10px;
+}
+
+main p {
+	margin-top: 5px;
+}
+
+main p img {
+	border: 3px double yellow;
 }
 
 /* Regras para as DIV do footer */
