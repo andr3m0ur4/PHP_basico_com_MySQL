@@ -172,3 +172,31 @@ nav li:hover a{
 nav li:hover li a:hover{
 	background: #95A9B1;
 }
+
+thead {
+	background: #353434;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+tfoot {
+	background: #353434;
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: right;
+}
+
+td.listaPar {
+	background: #CDCDCD;
+}
+
+td.listaImpar {
+	background: #F8F8F8;
+}
+
+tbody {
+
+}
+th.legenda {
+	text-align: left;
+}

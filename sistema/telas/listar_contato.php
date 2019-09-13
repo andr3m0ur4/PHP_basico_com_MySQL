@@ -67,51 +67,119 @@ if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
 }
 ?>
 <form method="POST" action="index.php?pg=contato">
-	<p>
-		<label for="con_nome">Nome:</label>
-		<input type="text" name="con_nome" size="100" value="<?php echo $contato -> getNome ( ); ?>">
-	</p>
-	<p>
-		<label for="con_rua">Endereço:</label>
-		<input type="text" name="con_rua" size="100" value="<?php echo $contato -> getRua ( ); ?>">
-	</p>
-	<p>
-		<label for="con_bairro">Bairro:</label>
-		<input type="text" name="con_bairro" size="50" value="<?php echo $contato -> getBairro ( ); ?>">
-		<label for="con_complemento">Complemento:</label>
-		<input type="text" name="con_complemento" size="50" value="<?php echo $contato -> getComplemento ( ); ?>">
-	</p>
-	<p>
-		<label for="con_cidade">Cidade:</label>
-		<input type="text" name="con_cidade" size="50" value="<?php echo $contato -> getCidade ( ); ?>">
-		<label for="con_estado">UF:</label>
-		<input type="text" name="con_estado" size="5" value="<?php echo $contato -> getEstado ( ); ?>">
-		<label for="con_cep">CEP:</label>
-		<input type="text" name="con_cep" size="30" value="<?php echo $contato -> getCEP ( ); ?>">
-	</p>
-	<p>
-		<label for="con_email">E-mail:</label>
-		<input type="email" name="con_email" size="100" value="<?php echo $contato -> getEmail ( ); ?>">
-	</p>
-	<p>
-		<label for="con_telefone">Telefone:</label>
-		<input type="phone" name="con_telefone" size="30" value="<?php echo $contato -> getTelefone ( ); ?>">
-		<label for="con_celular">Celular:</label>
-		<input type="phone" name="con_celular" size="30" value="<?php echo $contato -> getCelular ( ); ?>">
-		<label for="usu_cod">Código do Usuário:</label>
-		<input type="text" name="usu_cod" size="5" value="<?php echo $contato -> getCodUsuario ( ); ?>">
-		<?php  
-		if ( $contato -> getCodigo ( ) == 0 ) { 
-		?>
-			<input type="submit" name="btinserir" value="Cadastrar">
-		<?php 
-		} else { 
-		?>
-			<input type="submit" name="btalterar" value="Salvar">
-			<input type="submit" name="btcancelar" value="Cancelar">
-			<input type="hidden" name="con_cod" value="<?php echo $contato -> getCodigo ( ); ?>">
-		<?php } ?>
-	</p>
+	<table width="100%" border="0">
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_nome">Nome:</label>
+			</th>
+			<td width="45%" colspan="3">
+				<input type="text" name="con_nome" size="100" value="<?php echo $contato -> getNome ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_rua">Endereço:</label>
+			</th>
+			<td width="45%" colspan="3">
+				<input type="text" name="con_rua" size="100" value="<?php echo $contato -> getRua ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_bairro">Bairro:</label>
+			</th>
+			<td width="45%" colspan="3">
+				<input type="text" name="con_bairro" size="100" 
+					value="<?php echo $contato -> getBairro ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_complemento">Complemento:</label>
+			</th>
+			<td width="45%" colspan="3">
+				<input type="text" name="con_complemento" size="100" 
+					value="<?php echo $contato -> getComplemento ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_cidade">Cidade:</label>
+			</th>
+			<td width="35%">
+				<input type="text" name="con_cidade" size="50" 
+					value="<?php echo $contato -> getCidade ( ); ?>">
+			</td>
+			<th width="5%" class="legenda">
+				<label for="con_estado">UF:</label>
+			</th>
+			<td width="30%">
+				<input type="text" name="con_estado" size="5" 
+					value="<?php echo $contato -> getEstado ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_cep">CEP:</label>
+			</th>
+			<td width="45%" colspan="3">
+				<input type="text" name="con_cep" size="30" value="<?php echo $contato -> getCEP ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_email">E-mail:</label>
+			</th>
+			<td width="45%" colspan="3">
+				<input type="email" name="con_email" size="100" 
+					value="<?php echo $contato -> getEmail ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="con_telefone">Telefone:</label>
+			</th>
+			<td width="35%">
+				<input type="phone" name="con_telefone" size="40" 
+					value="<?php echo $contato -> getTelefone ( ); ?>">
+			</td>
+			<th width="5%" class="legenda">
+				<label for="con_celular">Celular:</label>
+			</th>
+			<td width="45%">
+				<input type="phone" name="con_celular" size="36" 
+					value="<?php echo $contato -> getCelular ( ); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th width="13%" class="legenda">
+				<label for="usu_cod">Selecionar Usuário:</label>
+			</th>
+			<td width="45%" colspan="3">
+				<select name="usu_cod" >
+					<?php include_once 'estrutura/select_usuario.php'; ?>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				<?php  
+				if ( $contato -> getCodigo ( ) == 0 ) { 
+				?>
+					<input type="submit" name="btinserir" value="Cadastrar">
+				<?php 
+				} else { 
+				?>
+					<input type="submit" name="btalterar" value="Salvar">
+					<input type="submit" name="btcancelar" value="Cancelar">
+					<input type="hidden" name="con_cod" value="<?php echo $contato -> getCodigo ( ); ?>">
+				<?php } ?>
+			</td>
+		</tr>
+	</table>
 </form>
 <br>
 <form method="POST">
@@ -122,33 +190,61 @@ if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
 <br>
 
 <table width="100%" border="1">
-	<tr>
-		<th width="4%">Código</th>
-		<th width="22%">Nome</th>
-		<th width="31%">Email</th>
-		<th width="25%">Telefone</th>
-		<th width="25%">Celular</th>
-		<th colspan="2">Opções</th>
-	</tr>
+	<thead>
+		<tr>
+			<th width="4%">Código</th>
+			<th width="22%">Nome</th>
+			<th width="31%">Email</th>
+			<th width="25%">Telefone</th>
+			<th width="25%">Celular</th>
+			<th colspan="2">Opções</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td colspan="7">Contatos cadastrados</td>
+		</tr>
+	</tfoot>
+	<tbody>
+	
 	<?php
 	// Buscar o nome para preencher o formulário
 	$valor = ( isset ( $_POST['localizar'] ) ) ? $_POST['con_nome'] : '';
 	$con = new Conexao ( );
 	$dal = new DalContato ( $con );
 	$resultado = $dal -> localizar ( $valor );
+	$par = false;
 	
 	while ( $registro = $resultado -> fetch_assoc ( ) ) {
 		$link_excluir = 'index.php?pg=contato&op=excluir&cod=' . $registro['con_cod'];
 		$link_alterar = 'index.php?pg=contato&op=alterar&cod=' . $registro['con_cod'];
 	?>
 		<tr>
-			<td><?php echo $registro['con_cod'] ?></td>
-			<td><?php echo $registro['con_nome'] ?></td>
-			<td><?php echo $registro['con_email'] ?></td>
-			<td><?php echo $registro['con_telefone'] ?></td>
-			<td><?php echo $registro['con_celular'] ?></td>
-			<td width="6%"><a href="<?php echo $link_alterar; ?>">Alterar</a></td>
-			<td width="6%"><a href="<?php echo $link_excluir; ?>">Excluir</a></td>
+			<td class="<?php echo ( $par ) ? 'listaPar' : 'listaImpar'; ?>">
+				<?php echo $registro['con_cod'] ?>
+			</td>
+			<td class="<?php echo ( $par ) ? 'listaPar' : 'listaImpar'; ?>">
+				<?php echo $registro['con_nome'] ?>
+			</td>
+			<td class="<?php echo ( $par ) ? 'listaPar' : 'listaImpar'; ?>">
+				<?php echo $registro['con_email'] ?>
+			</td>
+			<td class="<?php echo ( $par ) ? 'listaPar' : 'listaImpar'; ?>">
+				<?php echo $registro['con_telefone'] ?>
+			</td>
+			<td class="<?php echo ( $par ) ? 'listaPar' : 'listaImpar'; ?>">
+				<?php echo $registro['con_celular'] ?>
+			</td>
+			<td width="6%" class="<?php echo ( $par ) ? 'listaPar' : 'listaImpar'; ?>">
+				<a href="<?php echo $link_alterar; ?>">Alterar</a>
+			</td>
+			<td width="6%" class="<?php echo ( $par ) ? 'listaPar' : 'listaImpar'; ?>">
+				<a href="<?php echo $link_excluir; ?>">Excluir</a>
+			</td>
 		</tr>
-	<?php } ?>
+	<?php 
+		$par = !$par;
+	}
+	?>
+	</tbody>
 </table>	
