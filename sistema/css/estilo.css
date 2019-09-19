@@ -50,18 +50,18 @@ header{
 	height: 150px;
 	width: 80%;
 	background-color: #42c4f2;
-	background-image: url(imagem/header.png);
+	background-image: url(../imagem/header.png);
 	background-repeat: no-repeat;
 	margin: 0 auto;
 	padding: 10px;
 }
 
-nav{
-	height: 30px;
+nav {
+	height: 100px;
 	width: 80%;
 	background-color: #90E6F8;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 30px;
 }
 
 main{
@@ -76,20 +76,20 @@ main p {
 	margin-top: 5px;
 }
 
-main p img {
+main figure img {
 	border: 3px double yellow;
 }
 
 /* Regras para as DIV do footer */
 footer p {
 	text-align: justify;
-	font-size: 30px;
+	font-size: 25px;
 	margin: 15px;
 	margin-left: 10px;
 }
 
 footer img {
-	padding-left: 5px;
+	padding-left: 15px;
 }
 
 #footer1 {
@@ -102,8 +102,8 @@ footer img {
 }
 
 #footer2 {
-	float: left;
-	width: 30%;
+	float: right;
+	width: 20%;
 }
 
 footer{
@@ -115,14 +115,14 @@ footer{
 }
 
 #myphoto {
-	height: 220px;
+	height: 200px;
 }
 
 /* CSS do menu feito com UL*/
 nav ul {
 	font-family: Arial, Verdana;
 	font-size: 12px;
-	margin: 0px 1px;
+	margin: 0px 52px;
 	padding: 0;
 	list-style: none;
 }
@@ -138,12 +138,12 @@ nav li ul{
 	margin: 0px;
 }
 
-nav ul li a{
+nav ul li a {
 	display: block;
 	text-decoration: none;
 	text-align: center;
 	color: #ffffff;
-	width: 238px;
+	width: 250px;
 	border-top: 1px solid #ffffff;
 	padding: 5px 15px 5px 15px;
 	background: #2C5463;
@@ -171,4 +171,29 @@ nav li:hover a{
 
 nav li:hover li a:hover{
 	background: #95A9B1;
+}
+
+thead {
+	background: #353434;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+tfoot {
+	background: #353434;
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: right;
+}
+
+td.listaPar {
+	background: #CDCDCD;
+}
+
+td.listaImpar {
+	background: #F8F8F8;
+}
+
+tbody {
+
 }

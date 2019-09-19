@@ -9,6 +9,7 @@
 	<meta name="keywords" content="curso php mysql site exemplo">
 	<meta name="autor" content="André Moura">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/folha_all.css">
 	<link rel="stylesheet" href="../css/home.css">
 </head>
@@ -20,28 +21,29 @@
 			<?php include_once 'menu.php'; ?>
 		</nav>
 	</header>
-	
-	<main>
-		<article>
-			<h1>Parte básica do curso</h1>
-			<hr>
-			<p>
-				Aborda todos conceitos básicos da linguagem de PHP.
-			</p>
 
-			<p>
-				Acessando o menu você irá testar alguns dos exemplos implementados no curso.
-			</p>
-			<p>
-				<?php  
-				include_once 'biblioteca_funcoes.php';
-				$dia = dia_atual ( );
-				echo exibeMensagem ( "Hoje é $dia" );
-				?>
-			</p>
-		</article>
+	<main>
+	
+		<?php 
+
+		# Conteúdo da página
+
+		if ( isset ( $_GET['pagina'] ) ) {
+			$pagina = $_GET['pagina'];
+		} else {
+			$pagina = 'home';
+		}
+		
+		switch ( $pagina ) {
+			case 'tabuada': include 'views/tabuada.php'; break;
+			case 'nprimo': include 'views/nprimo.php'; break;
+			case 'cbinario': include 'views/cbinario.php'; break;
+			default: include 'views/home.php'; break;
+		}
+		?>
 		
 	</main>
+
 	<footer>
 		<p>Site desenvolvido por André Moura</p>
 	</footer>

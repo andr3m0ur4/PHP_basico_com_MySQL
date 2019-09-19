@@ -52,8 +52,9 @@ class DALContato {
 		//echo $sql;
 		$this -> conexao -> Conectar ( );
 		$banco = $this -> conexao -> getBanco ( );
-		$banco -> query ( $sql );
+		$retorno = $banco -> query ( $sql );
 		$this -> conexao -> Desconectar ( );
+		return $retorno;
 	}
 
 	public function localizar ( $nome = '' ) {
