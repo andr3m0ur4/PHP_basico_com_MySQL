@@ -1,8 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
-
 header{
 	width: 80%;
 	height: 10em;
@@ -27,9 +25,9 @@ img{
 
 header nav a:link, a:visited {
     background-color: #f44336;
-	width:22%;
+	width:32%;
     color: white;
-    padding: 14px 25px;
+    padding: 14px 15px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
@@ -80,6 +78,13 @@ main{
 	padding: 0.6em;
 	background-color: none;
 	box-shadow: -3px 2px 20px 0px #2E2E2E;
+}
+
+fieldset {
+	border: 1px solid #333;
+	width: auto;
+	min-height: all;
+	padding: 0.6em
 }
 
 article{

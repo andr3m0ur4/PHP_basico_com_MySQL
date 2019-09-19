@@ -9,6 +9,7 @@
 	<meta name="keywords" content="curso php mysql site exemplo">
 	<meta name="autor" content="André Moura">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/folha_all.css">
 	<link rel="stylesheet" href="css/home.css">
 </head>
@@ -20,7 +21,7 @@
 			<h1>PHP com banco de dados MySQL</h1>
 			<p>
 				<a href="basico/index.php">Básico</a>
-				<a href="#">Sistema</a>
+				<a href="sistema/index.php">Sistema</a>
 			</p>
 		</nav>
 	</header>

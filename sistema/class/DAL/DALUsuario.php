@@ -63,5 +63,18 @@ class DALUsuario {
 		$this -> conexao -> Desconectar ( );
 		return $usuario;
 	}
+
+	public function verificarLogin ( $usuario = '', $senha = '' ) {
+		$sql = "SELECT * FROM usuario WHERE usu_login = '{$usuario}' AND usu_senha = '{$senha}'";
+		$this -> conexao -> Conectar ( );
+		$banco = $this -> conexao -> getBanco ( );
+		$consulta = $banco -> query ( $sql );
+		$this -> conexao -> Desconectar ( );
+		if ( $consulta -> num_rows == 1 ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 ?>

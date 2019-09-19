@@ -57,7 +57,8 @@ if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
 				<label for="usu_nome">Nome:</label>
 			</th>
 			<td>
-				<input type="text" name="usu_nome" size="100" value="<?php echo $usuario -> getNome ( ); ?>">
+				<input type="text" name="usu_nome" size="100" value="<?php echo $usuario -> getNome ( ); ?>"
+					class="form-control col-sm-8" style="position: unset;">
 			</td>
 		</tr>
 		<tr>
@@ -66,7 +67,7 @@ if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
 			</td>
 			<td>
 				<input type="email" name="usu_email" size="100" 
-					value="<?php echo $usuario -> getEmail ( ); ?>">
+					value="<?php echo $usuario -> getEmail ( ); ?>" class="form-control col-sm-8">
 			</td>
 		</tr>
 		<tr>
@@ -74,7 +75,8 @@ if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
 				<label for="usu_login">Login:</label>
 			</th>
 			<td>
-				<input type="text" name="usu_login" size="42" value="<?php echo $usuario -> getLogin ( ); ?>">
+				<input type="text" name="usu_login" size="42" value="<?php echo $usuario -> getLogin ( ); ?>"
+					class="form-control col-sm-8">
 			</td>
 		</tr>
 		<tr>
@@ -83,23 +85,23 @@ if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
 			</th>
 			<td>
 				<input type="password" name="usu_senha" size="42" 
-					value="<?php echo $usuario -> getSenha ( ); ?>">
+					value="<?php echo $usuario -> getSenha ( ); ?>" class="form-control col-sm-8">
 			</td>
 		</tr>
 		<tr>
 			<td>
 				
 			</td>
-			<td>
+			<td><br>
 				<?php  
 				if ( $usuario -> getCodigo ( ) == 0 ) { 
 				?>
-					<input type="submit" name="btinserir" value="Cadastrar">
+					<input type="submit" name="btinserir" value="Cadastrar" class="btn btn-success">
 				<?php 
 				} else { 
 				?>
-					<input type="submit" name="btalterar" value="Salvar">
-					<input type="submit" name="btcancelar" value="Cancelar">
+					<input type="submit" name="btalterar" value="Salvar" class="btn btn-success">
+					<input type="submit" name="btcancelar" value="Cancelar" class="btn btn-secondary">
 					<input type="hidden" name="usu_cod" value="<?php echo $usuario -> getCodigo ( ); ?>">
 				<?php } ?>
 			</td>
@@ -108,9 +110,11 @@ if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
 </form>
 <br>
 <form method="POST">
-	<label for="usu_nome">Informe o nome do usuário:</label>
-	<input type="text" name="usu_nome">
-	<input type="submit" name="localizar" value="Localizar">
+	<div class="form-row">
+		<label for="usu_nome"><strong>Informe o nome do usuário:</strong></label>
+		<input type="text" name="usu_nome" class="ml-2 form-control col-sm-4">
+		<input type="submit" name="localizar" value="Localizar" class="ml-2 btn btn-light">
+	</div>
 </form>
 <br>
 
