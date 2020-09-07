@@ -18,8 +18,7 @@ isset ( $_POST['usuario'] ) ? include_once 'telas/processa_login.php' : '';
 	<meta name="description" content="Agenda criado no curso de PHP com MySQL" />
 	<meta name="keywords" content="curso php mysql agenda exemplo">
 	<meta name="autor" content="André Moura">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
@@ -34,7 +33,7 @@ isset ( $_POST['usuario'] ) ? include_once 'telas/processa_login.php' : '';
 
 	<main>
 		<!-- Todo o conteúdo do principal -->
-		<article>
+		<article class="mb-4">
 			<!-- Todo o conteúdo de notícia -->
 			<?php include_once 'estrutura/principal.php'; ?>
 		</article>

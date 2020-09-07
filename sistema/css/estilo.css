@@ -64,7 +64,7 @@ nav {
 	padding: 30px;
 }
 
-main{
+main {
 	height: auto;
 	width: 80%;
 	background-color: #1385AD;
@@ -143,7 +143,7 @@ nav ul li a {
 	text-decoration: none;
 	text-align: center;
 	color: #ffffff;
-	width: 250px;
+	width: 230px;
 	border-top: 1px solid #ffffff;
 	padding: 5px 15px 5px 15px;
 	background: #2C5463;
@@ -192,8 +192,4 @@ td.listaPar {
 
 td.listaImpar {
 	background: #F8F8F8;
-}
-
-tbody {
-
 }

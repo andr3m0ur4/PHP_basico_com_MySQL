@@ -8,8 +8,6 @@
 	<meta name="description" content="Site criado no curso de PHP com MySQL" />
 	<meta name="keywords" content="curso php mysql site exemplo">
 	<meta name="autor" content="André Moura">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/folha_all.css">
 	<link rel="stylesheet" href="../css/home.css">
 </head>
