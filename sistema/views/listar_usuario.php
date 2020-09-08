@@ -17,38 +17,37 @@
 	}
 
 	// Alterar o usuário
-	if ( isset ( $_POST['btalterar'] ) ) {
-		$codigo = $_POST['usu_cod'];
-		$nome = $_POST['usu_nome'];
-		$email = $_POST['usu_email'];
-		$login = $_POST['usu_login'];
-		$senha = $_POST['usu_senha'];
+	if (isset($_POST['btalterar'])) {
+		$codigo = intval($_POST['usu_cod']);
+		$nome = addslashes($_POST['usu_nome']);
+		$email = addslashes($_POST['usu_email']);
+		$login = addslashes($_POST['usu_login']);
+		$senha = md5(addslashes($_POST['usu_senha']));
 
-		$usuario = new Usuario ( $codigo, $nome, $email, $login, $senha );
-		$con = new Conexao ( );
-		$dal = new DALUsuario ( $con );
-		$dal -> alterar ( $usuario );
-		$usuario = new Usuario ( );
+		$usuario = new Usuario($codigo, $nome, $email, $login, $senha);
+		$con = new Conexao();
+		$dal = new DALUsuario($con);
+		$dal->alterar($usuario);
+		$usuario = new Usuario();
 	}
 
 	// Excluir um registro
-	if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'excluir' ) {
-		$con = new Conexao ( );
-		$dal = new DALUsuario ( $con );
-		$flag = $dal -> excluir ( $_GET['cod'] );
-		if ( !$flag ) {
+	if (isset($_GET['op']) && $_GET['op'] == 'excluir') {
+		$con = new Conexao();
+		$dal = new DALUsuario($con);
+		$codigo = intval($_GET['cod']);
+		$flag = $dal->excluir($codigo);
+		if (!$flag) {
 			$msg = 'Não foi possível excluir o registro. O registro possui contatos cadastrados.';
-			echo $msg;
 		}
 	}
 
 	// Carregar um registro
-	if ( isset ( $_GET['op'] ) AND $_GET['op'] == 'alterar' ) {
-		$con = new Conexao ( );
-		$dal = new DALUsuario ( $con );
-		$usuario = $_GET['cod'];
-		$usuario = $dal -> carregarUsuario ( $usuario );
-		
+	if (isset($_GET['op']) && $_GET['op'] == 'alterar') {
+		$con = new Conexao();
+		$dal = new DALUsuario($con);
+		$codigo = intval($_GET['cod']);
+		$usuario = $dal->carregarUsuario($codigo);
 	}
 
 	$valor = isset($_POST['localizar']) ? $_POST['usu_nome'] : '';

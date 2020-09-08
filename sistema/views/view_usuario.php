@@ -14,16 +14,16 @@
 		</div>
 		<div class="form-row mt-3">
 			<label class="col-sm-2" for="usu_nome"><strong>Senha:</strong></label>
-			<input type="password" name="usu_senha" size="42" value="<?= $usuario->__get('senha') ?>" class="form-control col-sm-7">
+			<input type="password" name="usu_senha" size="42" class="form-control col-sm-7">
 		</div>
 		<div class="form-row mt-3">
 			<div class="col-sm-2"></div>
 			<div class="mt-4">
 				<?php if ($usuario->__get('codigo') == 0) : ?>
 					<button name="btinserir" class="btn btn-success">Cadastrar</button>
-                <?php else : ?>
-                    <input type="submit" name="btalterar" value="Salvar" class="btn btn-success">
-                    <input type="submit" name="btcancelar" value="Cancelar" class="btn btn-secondary">
+				<?php else : ?>
+					<button name="btalterar" class="btn btn-success">Salvar</button>
+					<button name="btcancelar" class="btn btn-secondary">Cancelar</button>
                     <input type="hidden" name="usu_cod" value="<?= $usuario->__get('codigo') ?>">
                 <?php endif ?>
 			</div>
@@ -59,8 +59,8 @@
 	<tbody>
 	
 		<?php foreach ($resultado->fetchAll(PDO::FETCH_OBJ) as $registro) : ?>
-			<?php $link_excluir = 'index.php?pg=usuario&op=excluir&cod=' . $registro->usu_cod; ?>
-			<?php $link_alterar = 'index.php?pg=usuario&op=alterar&cod=' . $registro->usu_cod; ?>
+			<?php $link_excluir = './index.php?pg=usuario&op=excluir&cod=' . $registro->usu_cod; ?>
+			<?php $link_alterar = './index.php?pg=usuario&op=alterar&cod=' . $registro->usu_cod; ?>
 		
 			<tr>
 				<td class="<?= ($par) ? 'listaPar' : 'listaImpar' ?>">
@@ -82,6 +82,7 @@
 					<a href="<?= $link_excluir ?>">Excluir</a>
 				</td>
 			</tr>
+
 			<?php $par = !$par ?>
 		<?php endforeach ?>
 	</tbody>
