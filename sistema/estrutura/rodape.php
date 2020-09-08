@@ -8,5 +8,5 @@
 	</p>
 </div>
 <div id="footer2">
-	<img id="myphoto" src="imagem/andre.jpg">
+	<img id="myphoto" src="./image/andre.jpg">
 </div>

@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema AgendaTurbo
+-- Schema MinhaAgenda
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema AgendaTurbo
+-- Schema MinhaAgenda
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `AgendaTurbo` DEFAULT CHARACTER SET utf8 ;
-USE `AgendaTurbo` ;
+CREATE SCHEMA IF NOT EXISTS `MinhaAgenda` DEFAULT CHARACTER SET utf8 ;
+USE `MinhaAgenda` ;
 
 -- -----------------------------------------------------
--- Table `AgendaTurbo`.`usuario`
+-- Table `MinhaAgenda`.`usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `AgendaTurbo`.`usuario` (
+CREATE TABLE IF NOT EXISTS `MinhaAgenda`.`usuario` (
   `usu_cod` INT NOT NULL AUTO_INCREMENT,
   `usu_nome` VARCHAR(45) NULL,
   `usu_email` VARCHAR(45) NULL,
@@ -31,9 +31,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `AgendaTurbo`.`contato`
+-- Table `MinhaAgenda`.`contato`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `AgendaTurbo`.`contato` (
+CREATE TABLE IF NOT EXISTS `MinhaAgenda`.`contato` (
   `con_cod` INT NOT NULL AUTO_INCREMENT,
   `con_nome` VARCHAR(95) NULL,
   `con_rua` VARCHAR(95) NULL,
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `AgendaTurbo`.`contato` (
   INDEX `fk_contato_usuario_idx` (`usu_cod` ASC),
   CONSTRAINT `fk_contato_usuario`
     FOREIGN KEY (`usu_cod`)
-    REFERENCES `AgendaTurbo`.`usuario` (`usu_cod`)
+    REFERENCES `MinhaAgenda`.`usuario` (`usu_cod`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

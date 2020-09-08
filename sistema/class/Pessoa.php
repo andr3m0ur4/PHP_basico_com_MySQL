@@ -1,38 +1,21 @@
-<?php  
-class Pessoa {
-	private $codigo;
-	private $nome;
-	private $email;
-	
-	function __construct ( $codigo = 0, $nome = '', $email = '' ) {
-		$this -> setCodigo ( $codigo );
-		$this -> setNome ( $nome );
-		$this -> setEmail ( $email );
-	}
+<?php
 
-	public function setCodigo ( $valor ) {
-		$this -> codigo = $valor;
-	}
+	class Pessoa
+	{	
+		function __construct($codigo = 0, $nome = '', $email = '')
+		{
+			$this->__set('codigo', $codigo);
+			$this->__set('nome', $nome);
+			$this->__set('email', $email);
+		}
 
-	public function getCodigo ( ) {
-		return $this -> codigo;
-	}
+		public function __set($atributo, $valor ) {
+			$this->$atributo = $valor;
+		}
 
-	public function setNome ( $valor ) {
-		$this -> nome = $valor;
-	}
-
-	public function getNome ( ) {
-		return $this -> nome;
-	}
-
-	public function setEmail ( $valor ) {
-		$this -> email = $valor;
-	}
-
-	public function getEmail ( ) {
-		return $this -> email;
+		public function __get($atributo)
+		{
+			return $this->$atributo;
+		}
 	}
 	
-}
-?>

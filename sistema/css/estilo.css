@@ -1,11 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
-acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, 
-tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
-tfoot, thead, tr, td, th, article, aside, canvas, details, embed, figure, figcaption, footer, header,
-hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -46,11 +42,11 @@ body{
 	margin-top: 0;
 }
 
-header{
+header {
 	height: 150px;
 	width: 80%;
 	background-color: #42c4f2;
-	background-image: url(../imagem/header.png);
+	background-image: url(../image/header.png);
 	background-repeat: no-repeat;
 	margin: 0 auto;
 	padding: 10px;
@@ -130,7 +126,6 @@ nav ul {
 nav ul li {
 	display: block;
 	position: relative;
-	float: left;
 }
 
 nav li ul{
@@ -143,7 +138,6 @@ nav ul li a {
 	text-decoration: none;
 	text-align: center;
 	color: #ffffff;
-	width: 230px;
 	border-top: 1px solid #ffffff;
 	padding: 5px 15px 5px 15px;
 	background: #2C5463;
@@ -153,15 +147,14 @@ nav ul li a {
 
 nav ul li a:hover{
 	background: #617F8A;
+	color: #fff;
 }
 
 nav li:hover ul{
-	display: block;
-	position: absolute;
+	display: flex !important;
 }
 
 nav li:hover li{
-	float: none;
 	font-size: 11px;
 }
 
