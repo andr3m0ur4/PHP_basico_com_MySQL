@@ -46,9 +46,9 @@
 			
 			$stmt = $this->conexao->prepare($sql);
 			$stmt->bindValue(':codigo', $codigo);
-			$stmt->execute();
+			$resultado = $stmt->execute();
 			
-			return $stmt;
+			return $resultado;
 		}
 
 		public function localizar($nome = '')

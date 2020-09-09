@@ -41,7 +41,7 @@
 	</div>
 </form>
 
-<table class="table table-border w-100 mt-4">
+<table class="table table-bordered w-100 mt-4">
 	<thead>
 		<tr>
 			<th width="4%">Código</th>
@@ -87,3 +87,7 @@
 		<?php endforeach ?>
 	</tbody>
 </table>
+
+<?php if (isset($flag) && !$flag) : ?>
+	<p><?= $msg ?></p>
+<?php endif ?>

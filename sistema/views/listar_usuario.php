@@ -1,6 +1,8 @@
 <?php
 
 	$usuario = new Usuario();
+	$con = new Conexao();
+	$dal = new DALUsuario($con);
 
 	// Inserir o usuário
 	if (isset($_POST['btinserir'])) {
@@ -10,8 +12,6 @@
 		$senha = md5(addslashes($_POST['usu_senha']));
 
 		$usuario = new Usuario(0, $nome, $email, $login, $senha);
-		$con = new Conexao();
-		$dal = new DALUsuario($con);
 		$dal->inserir($usuario);
 		$usuario = new Usuario();
 	}
@@ -25,16 +25,12 @@
 		$senha = md5(addslashes($_POST['usu_senha']));
 
 		$usuario = new Usuario($codigo, $nome, $email, $login, $senha);
-		$con = new Conexao();
-		$dal = new DALUsuario($con);
 		$dal->alterar($usuario);
 		$usuario = new Usuario();
 	}
 
 	// Excluir um registro
 	if (isset($_GET['op']) && $_GET['op'] == 'excluir') {
-		$con = new Conexao();
-		$dal = new DALUsuario($con);
 		$codigo = intval($_GET['cod']);
 		$flag = $dal->excluir($codigo);
 		if (!$flag) {
@@ -44,15 +40,11 @@
 
 	// Carregar um registro
 	if (isset($_GET['op']) && $_GET['op'] == 'alterar') {
-		$con = new Conexao();
-		$dal = new DALUsuario($con);
 		$codigo = intval($_GET['cod']);
 		$usuario = $dal->carregarUsuario($codigo);
 	}
 
 	$valor = isset($_POST['localizar']) ? $_POST['usu_nome'] : '';
-	$con = new Conexao();
-	$dal = new DalUsuario($con);
 	$resultado = $dal->localizar($valor);
 	$par = false;
 	
