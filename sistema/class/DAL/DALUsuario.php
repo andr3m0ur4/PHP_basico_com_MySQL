@@ -46,7 +46,12 @@
 			
 			$stmt = $this->conexao->prepare($sql);
 			$stmt->bindValue(':codigo', $codigo);
-			$resultado = $stmt->execute();
+			
+			try {
+				$resultado = $stmt->execute();
+			} catch (PDOException $e) {
+				$resultado = false;
+			}
 			
 			return $resultado;
 		}

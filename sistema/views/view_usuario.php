@@ -89,5 +89,5 @@
 </table>
 
 <?php if (isset($flag) && !$flag) : ?>
-	<p><?= $msg ?></p>
+	<p class="alert alert-danger text-center"><?= $msg ?></p>
 <?php endif ?>
